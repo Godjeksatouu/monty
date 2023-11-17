@@ -87,10 +87,12 @@ void pint(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pop - pops the top element of a stack
- * @stack: a pointer to a pointer to the stack
- * @line_number: holds the line the code is run
+ * pop - Removes the top element from the stack.
+ *
+ * @stack: Pointer to the stack.
+ * @line_number: Line number where the code is executed.
  */
+
 
 void pop(stack_t **stack, unsigned int line_number)
 {

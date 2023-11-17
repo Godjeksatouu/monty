@@ -1,9 +1,11 @@
 #include "monty.h"
 
 /**
- * get_op - gets the operation from token
- * @tok: the operation
- * Return: a function pointer
+ * get_op - Retrieves the operation from a token.
+ *
+ * @tok: The operation token.
+ *
+ * Returns: A function pointer.
  */
 
 void (*get_op(char *tok))(stack_t **stack, unsigned int line_number)
