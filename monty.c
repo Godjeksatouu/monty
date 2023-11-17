@@ -4,13 +4,15 @@ void free_stack(stack_t *stack);
 int misc[] = {0, 0, 0};
 
 /**
- * main - Process Monty byte codes from a file passed in as an argument.
+ * main - Runs Monty commands from a file given as a command-line argument.
  *
- * @argc: The number of arguments passed to the program.
- * @argv: A double pointer containing the arguments passed.
+ * @argc: Number of arguments provided to the program.
+ * @argv: Array holding command-line arguments.
  *
- * Return: EXIT_SUCCESS if no errors encountered..
+ * Return: Returns EXIT_SUCCESS if the program runs without issues;
+ *         otherwise, an error code.
  */
+
 int main(int argc, char **argv)
 {
 	FILE *monty_file;
@@ -56,12 +58,14 @@ int main(int argc, char **argv)
 }
 
 /**
- * free_stack - Frees up the memory allocated for the stack.
+ * free_stack - Frees up memory used by the stack.
  *
- * @stack: Pointer to the beginning of the stack.
+ * @stack: Pointer to the start of the stack.
  *
- * Return: Void.
+ * Returns: Nothing.
  */
+
+
 void free_stack(stack_t *stack)
 {
 	stack_t *next;

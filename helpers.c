@@ -1,10 +1,11 @@
 /**
- * check_num - Checks if a string is a number.
+ * check_num - Determines if a string is a valid number.
  *
- * @num: Pointer to the supposed number string.
+ * @num: Pointer to the string being examined.
  *
- * Return: 0 if the string contains a non-number character, otherwise 1.
+ * Return: 0 if the string contains a non-numeric character, else 1.
  */
+
 char check_num(char *num)
 {
 	unsigned int i;
