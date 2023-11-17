@@ -1,15 +1,16 @@
 #include "monty.h"
 
 /**
- * mul - Takes the top two elements of the stack and multiplies them. Result is
- * stored at the top of the stack. The stack will be one shorter than before.
- * If an error occurs, print a message to stderr and exit with EXIT_FAILURE.
+ * mul - Multiplies the top two elements of the stack.
+ *       Stores the result at the top, making the stack shorter.
+ *       Exits with an error message and EXIT_FAILURE if an issue occurs.
  *
- * @stack: Double pointer to the top of the stack.
+ * @stack: Pointer to the stack's top.
  * @line_number: Line number of where the mul opcode is in the file.
  *
- * Return: Void.
+ * Return: None.
  */
+
 void mul(stack_t **stack, unsigned int line_number)
 {
 	int res;
@@ -26,16 +27,16 @@ void mul(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * mod - Takes the second element of the stack modulus it by the first element
- * of the stack. Result is stored at the top of the stack. The stack will be
- * one shorter than before. If an error occurs, print a message to stderr and
- * exit with EXIT_FAILURE.
+ * mod - Computes the remainder of the second element divided by the first.
+ *       Stores the result at the top, making the stack shorter.
+ *       Exits with an error message and EXIT_FAILURE if an issue occurs.
  *
- * @stack: Double pointer to the top of the stack
- * @line_number: Line number of where the mod opcode is in the file.
+ * @stack: Pointer to the stack's top.
+ * @line_number: Line number where the mod opcode is in the file.
  *
- * Return: Void.
+ * Return: None.
  */
+
 void mod(stack_t **stack, unsigned int line_number)
 {
 	int res;
@@ -59,15 +60,15 @@ void mod(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pchar - Treats the integer value at the top of the stack as an ascii and
- * prints the char equivalent.
- * If an error is encountered, prints a message and exits with EXIT_FAILURE.
+ * pchar - Prints the character equivalent of the integer at the top of the stack.
+ *         Exits with an error message and EXIT_FAILURE if an issue occurs.
  *
- * @stack: Double pointer to the top of the stack
+ * @stack: Pointer to the stack's top.
  * @line_number: Line number of where the pchar opcode is in the file.
  *
- * Return: Void.
+ * Return: None.
  */
+
 void pchar(stack_t **stack, unsigned int line_number)
 {
 	if (stack == NULL || *stack == NULL)
@@ -87,13 +88,14 @@ void pchar(stack_t **stack, unsigned int line_number)
 }
 
 /**
- * pstr - Prints the integer values of a stack as ascii characters. Stops when
- * the stack is over, the value of the element is 0, or an invalid ascii value.
- * Prints a newline regardless.
+ * pstr - Prints stack elements as ASCII characters until the stack is empty,
+ *        an element is 0, or an invalid ASCII value is encountered. Prints a
+ *        newline regardless.
  *
- * @stack: Double pointer to the top of the stack
- * @line_number: Line number of where the pstr opcode is in the file.
+ * @stack: Pointer to the stack's top.
+ * @line_number: Line number where the pstr opcode is in the file.
  */
+
 void pstr(stack_t **stack, unsigned int line_number)
 {
 	stack_t *current;

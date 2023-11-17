@@ -1,9 +1,9 @@
 #!/bin/bash
 
 for file in ./bytecodes/*
-	do
-		echo "---Test: $file ---"
-		./a.out "$file"
-		echo ---End---
-		echo
+do
+    echo "--- Testing: $file ---"
+    ./a.out "$file"
+    echo "--- End of Test ---"
+    echo
 done
